@@ -1,74 +1,77 @@
 # Mod Browser Web 🛠️
 
-A high-performance, strictly minimalist web interface for discovering and managing Minecraft modifications. Powered by the **Modrinth API**, this application provides a professional-grade experience for power users who value speed, clarity, and deep filtering.
+<div align="center">
+  <img src="./src/assets/react.svg" width="100" height="100" alt="Logo" />
+  <p>
+    <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+    <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+    <img src="https://img.shields.io/badge/Modrinth_API-30B030?style=for-the-badge&logo=modrinth&logoColor=white" alt="Modrinth" />
+  </p>
+</div>
 
-## 🌌 Design Philosophy: Strict Dark Minimalism
+---
 
-This project adheres to a uncompromising aesthetic of functional elegance:
-- **Palette:** Step-weighted monochrome surfaces starting from background `#0c0c0c` to surface `#2a2a2a`.
-- **Separation:** Elements are defined exclusively through sharp `1px solid #222` borders. No shadows, no blurs.
-- **Typography:** 
-    - **DM Sans** for primary UI interactions with tight letter-spacing on headers.
-    - **DM Mono** for all technical data, version numbers, and statistics.
-- **Interaction:** Flat, high-response components. No "bounce" animations—only lightning-fast state transitions and clean fade-ins.
+## 🌐 Language / Язык
+- [English](#english)
+- [Русский](#русский)
 
-## ✨ Key Features
+---
 
-### 🔍 Advanced Discovery
-- **Granular Filtering:** Filter by Minecraft version, Mod loader (Fabric, Quilt, NeoForge, Forge, etc.), Categories, Environment (Client/Server), and License (Open Source toggle).
-- **Sorted Results:** View mods in a strict 3x3 grid designed for maximum information density without clutter.
+<a name="english"></a>
+# [EN] English Version
 
-### 📜 Total Version Purification
-- **Smart Parsing:** An aggressive parsing engine that strips redundant noise (loader suffixes, mod titles, MC prefixes) to show only the clean build number.
-- **Stability Logic:** Versions are automatically grouped and color-coded by stability:
-    - 🟢 **Release**
-    - 🟠 **Beta/Pre-release**
-    - 🔴 **Alpha**
-- **Priority Sorting:** Intelligent sorting that prioritizes stability (Releases first) and loader relevance (Fabric > Quilt > NeoForge > Forge).
+A high-performance, strictly minimalist web interface for discovering and managing Minecraft modifications. Powered by the **Modrinth API**, this application provides a professional-grade experience for power users.
 
-### 🖥️ Premium Detailed View
-- **Full-Page Experience:** Deep-dive into mod details with a full-screen layout.
-- **Stats Dashboard:** High-visibility counters for downloads and followers using mono-spaced typography.
-- **Responsive Controls:** Quick-access buttons for Modrinth integration and a local Favorites system.
+### ✨ Key Features
+- **Strict Dark Minimalism:** Optimized for concentration and speed.
+- **Aggressive Parsing:** Clean version numbers without visual noise.
+- **Smart Filtering:** Advanced filters for loaders, stability (Alpha/Beta), and environment.
+- **Total Version Logic:** Semantic sorting and color-coded stability side-borders.
+
+### 📂 Code Examples (`/test`)
+Explore the `test/` directory for standalone scripts demonstrating Modrinth API integration:
+- `test_search.py`: Basic keyword search.
+- `test_details.py`: Fetch comprehensive project metadata.
+- `test_versions.js`: List all published versions for a project.
+- `test_download.tsx`: Extract direct download links using TypeScript.
+- `test_user_projects.py`: Retrieve projects by a specific author.
+- `test_global_stats.py`: Get platform-wide statistics.
+- `test_facets.js`: Advanced filtering using Modrinth facets.
+
+---
+
+<a name="русский"></a>
+# [RU] Русская версия
+
+Высокопроизводительный, строго минималистичный веб-интерфейс для поиска и управления модификациями Minecraft. Работает на базе **Modrinth API**, обеспечивая профессиональный опыт для продвинутых пользователей.
+
+### ✨ Основные возможности
+- **Строгий Тёмный Минимализм:** Интерфейс, оптимизированный для скорости и концентрации.
+- **Агрессивный Парсинг:** Чистые номера версий без лишнего визуального мусора.
+- **Умная Фильтрация:** Продвинутые фильтры по загрузчикам, стабильности (Alpha/Beta) и окружению.
+- **Логика Версий:** Семантическая сортировка и цветовая индикация статуса сборки.
+
+### 📂 Примеры кода (`/test`)
+В папке `test/` вы найдете скрипты, демонстрирующие работу с Modrinth API:
+- `test_search.py`: Базовый поиск по ключевым словам.
+- `test_details.py`: Получение полных метаданных проекта.
+- `test_versions.js`: Список всех опубликованных версий.
+- `test_download.tsx`: Получение прямых ссылок на скачивание (TypeScript).
+- `test_user_projects.py`: Проекты конкретного автора.
+- `test_global_stats.py`: Глобальная статистика платформы.
+- `test_facets.js`: Продвинутая фильтрация с использованием фасетов.
 
 ## 🛠️ Technical Stack
-
-- **Framework:** [React 18+](https://reactjs.org/)
-- **Language:** [TypeScript](https://www.typescriptlang.org/) (Strictly typed)
-- **API:** [Modrinth API v2](https://docs.modrinth.com/)
-- **Icons:** [Lucide React](https://lucide.dev/)
-- **Styling:** Vanilla CSS3 with custom variables and grid-based layouts.
-- **HTTP Client:** [Axios](https://axios-http.com/)
+- **Framework:** React 18+
+- **Language:** TypeScript
+- **API:** Modrinth API v2
+- **Icons:** Lucide React
 
 ## 🚀 Getting Started
-
-### Prerequisites
-- Node.js (v16 or higher)
-- npm or yarn
-
-### Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-repo/mod-browser-web.git
-   ```
-2. Navigate to the directory:
-   ```bash
-   cd mod-browser-web
-   ```
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
-4. Start the development server:
-   ```bash
-   npm run dev
-   ```
-
-## 📂 Project Structure
-
-- `src/App.tsx`: Core application logic, API orchestration, and state management.
-- `src/App.css`: Implementation of the Strict Dark Minimalism design system.
-- `src/main.tsx`: Application entry point.
+```bash
+npm install
+npm run dev
+```
 
 ---
 *Created with a focus on precision and performance.*
