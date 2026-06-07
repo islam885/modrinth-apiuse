@@ -1,73 +1,74 @@
-# React + TypeScript + Vite
+# Mod Browser Web 🛠️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A high-performance, strictly minimalist web interface for discovering and managing Minecraft modifications. Powered by the **Modrinth API**, this application provides a professional-grade experience for power users who value speed, clarity, and deep filtering.
 
-Currently, two official plugins are available:
+## 🌌 Design Philosophy: Strict Dark Minimalism
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This project adheres to a uncompromising aesthetic of functional elegance:
+- **Palette:** Step-weighted monochrome surfaces starting from background `#0c0c0c` to surface `#2a2a2a`.
+- **Separation:** Elements are defined exclusively through sharp `1px solid #222` borders. No shadows, no blurs.
+- **Typography:** 
+    - **DM Sans** for primary UI interactions with tight letter-spacing on headers.
+    - **DM Mono** for all technical data, version numbers, and statistics.
+- **Interaction:** Flat, high-response components. No "bounce" animations—only lightning-fast state transitions and clean fade-ins.
 
-## React Compiler
+## ✨ Key Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🔍 Advanced Discovery
+- **Granular Filtering:** Filter by Minecraft version, Mod loader (Fabric, Quilt, NeoForge, Forge, etc.), Categories, Environment (Client/Server), and License (Open Source toggle).
+- **Sorted Results:** View mods in a strict 3x3 grid designed for maximum information density without clutter.
 
-## Expanding the ESLint configuration
+### 📜 Total Version Purification
+- **Smart Parsing:** An aggressive parsing engine that strips redundant noise (loader suffixes, mod titles, MC prefixes) to show only the clean build number.
+- **Stability Logic:** Versions are automatically grouped and color-coded by stability:
+    - 🟢 **Release**
+    - 🟠 **Beta/Pre-release**
+    - 🔴 **Alpha**
+- **Priority Sorting:** Intelligent sorting that prioritizes stability (Releases first) and loader relevance (Fabric > Quilt > NeoForge > Forge).
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 🖥️ Premium Detailed View
+- **Full-Page Experience:** Deep-dive into mod details with a full-screen layout.
+- **Stats Dashboard:** High-visibility counters for downloads and followers using mono-spaced typography.
+- **Responsive Controls:** Quick-access buttons for Modrinth integration and a local Favorites system.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Technical Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Framework:** [React 18+](https://reactjs.org/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/) (Strictly typed)
+- **API:** [Modrinth API v2](https://docs.modrinth.com/)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Styling:** Vanilla CSS3 with custom variables and grid-based layouts.
+- **HTTP Client:** [Axios](https://axios-http.com/)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🚀 Getting Started
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repo/mod-browser-web.git
+   ```
+2. Navigate to the directory:
+   ```bash
+   cd mod-browser-web
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📂 Project Structure
+
+- `src/App.tsx`: Core application logic, API orchestration, and state management.
+- `src/App.css`: Implementation of the Strict Dark Minimalism design system.
+- `src/main.tsx`: Application entry point.
+
+---
+*Created with a focus on precision and performance.*
